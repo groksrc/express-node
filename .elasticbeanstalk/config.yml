@@ -1,4 +1,6 @@
 branch-defaults:
+  environments:
+    environment: node-express-dev
   hacking:
     environment: node-express-dev
   master:
