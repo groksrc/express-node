@@ -15,5 +15,8 @@
     "hbs": "^4.0.0",
     "morgan": "^1.6.1",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "errorhandler": "^1.4.3"
   }
 }
