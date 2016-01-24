@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var consolidate = require('consolidate');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -11,8 +12,9 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
+app.engine('hbs', consolidate.handlebars);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'hbs');
 app.enable('trust proxy');
 app.disable('x-powered-by');
 
