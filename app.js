@@ -43,7 +43,8 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(require('errorhandler')());
+  var errorHandler = require('errorhandler');
+  app.use(errorHandler());
 }
 
 // production error handler

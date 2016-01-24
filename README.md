@@ -2,6 +2,13 @@
 
 A sample application that runs on AWS Elastic Beanstalk: http://node-express-dev-ippy9v2xhj.elasticbeanstalk.com/
 
+##Running with node-dev
+Running with node-dev will watch required files and automatically restart the app when changes are detected.
+```
+$ npm install -g node-dev
+$ node-dev ./bin/www
+```
+
 
 ##Helpful links
 
