@@ -26,7 +26,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+// setup public directory with stylus 
+var publicDirectory = path.join(__dirname, 'public');
+app.use(require('stylus').middleware(publicDirectory))
+app.use(express.static(publicDirectory));
+
 
 // make config available to the app
 app.use(function(req, res, next){
@@ -34,6 +39,7 @@ app.use(function(req, res, next){
     next();
 });
 
+// routes
 app.use('/', routes);
 app.use('/users', users);
 app.use('/error', error);

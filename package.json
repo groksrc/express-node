@@ -14,10 +14,11 @@
     "handlebars": "^4.0.5",
     "hbs": "^4.0.0",
     "morgan": "^1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "stylus": "^0.53.0"
   },
   "devDependencies": {
     "errorhandler": "^1.4.3",
-    "node-notifier": "^4.4.0" // See README for node-dev
+    "node-notifier": "^4.4.0"
   }
 }
